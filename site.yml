@@ -1,5 +1,7 @@
 ---
 - hosts: tag_Class_Miners
   remote_user: ubuntu
+  sudo: true
   tasks:
    - include: dependencies.yml
+   - include: btcd.yml

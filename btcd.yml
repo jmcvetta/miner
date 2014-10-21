@@ -1,0 +1,3 @@
+---
+- name: Clone btcd source from Github
+  git: repo=https://github.com/conformal/btcd.git dest=/opt/btcd

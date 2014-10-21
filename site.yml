@@ -1,0 +1,5 @@
+---
+- hosts: tag_Class_Miners
+  remote_user: ubuntu
+  tasks:
+   - include: dependencies.yml

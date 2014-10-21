@@ -1,0 +1,9 @@
+---
+- hosts: tag_Class_Miners
+  remote_user: ubuntu
+  sudo: true
+  tasks:
+    - name: Ensure Go programming language is installed
+      apt: name=golang state=present
+    - name: Ensure Git is installed
+      apt: name=git state=present

@@ -1,0 +1,29 @@
+---
+- name: Ensure Golang is installed
+  apt: pkg=golang state=installed
+
+- name: Add Ubuntu SDK Repository
+  apt_repository: repo='ppa:ubuntu-sdk-team/ppa' update_cache=yes
+
+- name: Ensure QT dependencies are installed
+  apt: pkg={{item}} state=installed
+  with_items:
+    - ubuntu-sdk 
+    - qtbase5-private-dev 
+    - qtdeclarative5-private-dev 
+    - libqt5opengl5-dev
+
+- name: Ensure build tools are installed
+  apt: pkg={{item}} state=installed
+  with_items:
+    - g++
+    - build-essential
+    - pkg-config
+
+- name: Ensure Ethereum dependencies are installed
+  apt: pkg={{item}} state=installed
+  with_items:
+    - pkg-config
+    - libgmp3-dev 
+    - libreadline6-dev
+

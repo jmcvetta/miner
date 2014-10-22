@@ -1,0 +1,6 @@
+# Group variables for all nodes
+
+# Golang environment
+go_env:
+  GOPATH: /opt
+  GOBIN: /usr/local/bin

@@ -1,7 +1,15 @@
 ---
-- hosts: tag_Class_Miners
+- name: Apply common configuration to all Miner nodes
   remote_user: ubuntu
   sudo: true
-  tasks:
-   - include: dependencies.yml
-   - include: btcd.yml
+  hosts: all
+  roles:
+    - common
+
+
+- name: Configure and deploy Ethereum
+  hosts: tag_Class_Ethereum
+  remote_user: ubuntu
+  sudo: true
+  roles:
+    - ethereum

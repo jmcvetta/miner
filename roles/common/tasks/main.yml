@@ -1,0 +1,11 @@
+---
+# This playbook contains common plays that will be run on all nodes.
+
+- name: Ensure Git is installed
+  apt: name=git state=present
+
+- name: Ensure Mercurial is installed
+  apt: name=mercurial state=present
+
+- name: Ensure htop is installed
+  apt: name=htop state=present

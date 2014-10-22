@@ -1,0 +1,4 @@
+---
+- name: Go get Ethereum
+  command: go get -u github.com/ethereum/go-ethereum/ethereum
+  environment: go_env
